@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            height: 80vh;
+            background-color: white;
+        }
+        form {
+            width: 350px;
+            background-color:rgb(201, 223, 231);
+            padding: 40px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form>
+    <table>
+        <tr align="left">
+            <th><b>HTML FORM</th>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" style="background-color:darkgrey; border-radius: 5px; border: 1px"></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text" style="background-color:darkgray; border-radius: 5px; border: 1px"></td>
+        </tr>
+        <tr>
+            <td>Date of Birth:</td>
+            <td><input type="date" style="background-color:darkgray; border-radius: 5px; border: 1px; width: 165px"></td>
+        </tr>
+        <tr>
+            <td>Email Id:</td>
+            <td><input type="email" style="background-color:darkgray; border-radius: 5px; border: 1px"></td>
+        </tr>
+        <tr>
+            <td>Mobile Number:</td>
+            <td><input type="text" style="background-color:  darkgray; border-radius: 5px; border: 1px"></td>
+        </tr>
+    </table>
+    <br> <br>
+    <button type="Submit" style="width:30%; height:30px; background-color:  darkgray; border-radius: 5px; border: 1px; margin-right: 15px;"><b>Submit</button>
+    <button type="Reset" style="width:30%; height:30px; background-color:  darkgray; border-radius: 5px; border: 1px"><b>Reset</button>
+    </form>  
+   
+        
+</body>
+</html>
