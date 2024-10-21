@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart City</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="password"], input[type="tel"], input[type="address"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    .signup-link {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title"><span>Signup</span></div>
+    <form action="user-dashboard.html" method="POST">
+      <div class="row">
+        <input type="text" placeholder="First Name" required />
+      </div>
+      <div class="row">
+        <input type="text" placeholder="Last Name" required />
+      </div>
+      <div class="row">
+        <input type="tel" placeholder="Phone Number" required />
+      </div>
+      <div class="row">
+        <input type="text" placeholder="Address" required />
+      </div>
+      <div class="row">
+        <input type="password" placeholder="New Password" required />
+      </div>
+      <div class="row">
+        <input type="password" placeholder="Confirm Password" required />
+      </div>
+      <div class="row">
+        <button type="submit" class="button">Signup</button>
+      </div>
+      <div class="signup-link">Already a member? <a href="user-login.html">Login now</a></div>
+    </form>
+  </div>
+</body>
+</html>

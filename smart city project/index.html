@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart City</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    /* Additional styles for modal */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 400px; /* Could be more or less, depending on screen size */
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title"><span>Smart City</span></div>
+    <form action="#">
+      <div class="row button">
+        <input type="button" value="User   Login" onclick="window.location.href='user-login.html'" />
+      </div>
+      <div class="row button">
+        <input type="button" value="Admin Login" onclick="window.location.href='admin-login.html'" />
+      </div>
+      <div class="signup-link">Not a member? <a href="#" id="signupBtn">Signup now</a></div>
+    </form>
+  </div>
+
+  <!-- The Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div class="title"><span>Signup</span></div>
+      <form action="user-dashboard.html" method="POST">
+        <div class="row">
+          <input type="text" placeholder="First Name" required />
+        </div>
+        <div class="row">
+          <input type="text" placeholder="Last Name" required />
+        </div>
+        <div class="row">
+          <input type="tel" placeholder="Phone Number" required />
+        </div>
+        <div class="row">
+          <input type="text" placeholder="Address" required />
+        </div>
+        <div class="row">
+          <input type="password" placeholder="New Password" required />
+        </div>
+        <div class="row">
+          <input type="password" placeholder="Confirm Password" required />
+        </div>
+        <div class="row">
+          <button type="submit" class="button">Signup</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("signupModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("signupBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementById("closeModal");
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

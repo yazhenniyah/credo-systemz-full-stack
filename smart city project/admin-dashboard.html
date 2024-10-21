@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart City</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif; 
+      background-color: #f0f0f0; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    .wrapper {
+      max-width: 600px; 
+      margin: 50px auto; 
+      padding: 20px; 
+      background: white; 
+      border-radius: 10px; 
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+      text-align: center; 
+    }
+
+    .button {
+      margin: 10px 0; 
+    }
+
+    .action-button {
+      font-size: 20px; 
+      padding: 10px 20px; 
+      background: #f9f9f9; 
+      border: none; 
+      border-radius: 5px; 
+      cursor: pointer; 
+      transition: background 0.3s; 
+      width: 100%; 
+    }
+
+    .action-button:hover {
+      background: #e0e0e0; 
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0,0.4); 
+      padding-top: 60px; 
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto; 
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; 
+      max-width: 400px; 
+      border-radius: 10px; 
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>Admin Dashboard</h2>
+    <div class="button">
+      <button class="action-button" id="addCityBtn">Add City</button>
+    </div>
+    <div class="button">
+      <button class="action-button" id="deleteCityBtn">Delete City</button>
+    </div>
+    <div class="button">
+      <button class="action-button" id="editInfoBtn">Edit Info</button>
+    </div>
+  </div>
+
+  <!-- Add City Modal -->
+  <div id="addCityModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeAddModal">&times;</span>
+      <h2>Add City</h2>
+      <input type="text" id="cityName" placeholder="Enter city name" required />
+      <button id="submitCity" class="action-button">Submit</button>
+    </div>
+  </div>
+
+  <!-- Delete City Modal -->
+  <div id="deleteCityModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeDeleteModal">&times;</span>
+      <h2>Delete City</h2>
+      <input type="text" id="cityNameToDelete" placeholder="Enter city name to delete" required />
+      <button id="submitDeleteCity" class="action-button">Delete</button>
+    </div>
+  </div>
+ <!-- Edit Info Modal -->
+ <div id="editInfoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeEditModal">&times;</span>
+      <h2>Edit City Info</h2>
+      <input type="text" id="cityNameToEdit" placeholder="Enter new city name" required />
+      <button id="submitEditCity" class="action-button">Update</button>
+    </div>
+  </div>
+
+  <script>
+    // Get the modals
+    var addCityModal = document.getElementById("addCityModal");
+    var deleteCityModal = document.getElementById("deleteCityModal");
+    var editInfoModal = document.getElementById("editInfoModal");
+
+    // Get the buttons that open the modals
+    var addCityBtn = document.getElementById("addCityBtn");
+    var deleteCityBtn = document.getElementById("deleteCityBtn");
+    var editInfoBtn = document.getElementById("editInfoBtn");
+
+    // Get the <span> elements that close the modals
+    var closeAddModal = document.getElementById("closeAddModal");
+    var closeDeleteModal = document.getElementById("closeDeleteModal");
+    var closeEditModal = document.getElementById("closeEditModal");
+
+    // Get the submit button for adding city
+    var submitBtn = document.getElementById("submitCity");
+
+    // Get the submit button for deleting city
+    var submitDeleteBtn = document.getElementById("submitDeleteCity");
+
+    // Get the submit button for editing city
+    var submitEditBtn = document.getElementById("submitEditCity");
+
+    // When the user clicks the "Add City" button, open the modal 
+    addCityBtn.onclick = function() {
+      addCityModal.style.display = "block";
+    }
+
+    // When the user clicks the "Delete City" button, open the modal 
+    deleteCityBtn.onclick = function() {
+      deleteCityModal.style.display = "block";
+    }
+
+    // When the user clicks the "Edit Info" button, open the modal 
+    editInfoBtn.onclick = function() {
+      editInfoModal.style.display = "block";
+    }
+
+    // Close modals
+    closeAddModal.onclick = function() {
+      addCityModal.style.display = "none";
+    }
+
+    closeDeleteModal.onclick = function() {
+      deleteCityModal.style.display = "none";
+    }
+
+    closeEditModal.onclick = function() {
+      editInfoModal.style.display = "none";
+    }
+
+    // Close modals when clicking outside
+    window.onclick = function(event) {
+      if (event.target == addCityModal) {
+        addCityModal.style.display = "none";
+      } else if (event.target == deleteCityModal) {
+        deleteCityModal.style.display = "none";
+      } else if (event.target == editInfoModal) {
+        editInfoModal.style.display = "none";
+      }
+    }
+
+    // When the user clicks the submit button for adding city
+    submitBtn.onclick = function() {
+      var cityName = document.getElementById("cityName").value;
+      if (cityName) {
+        alert("City added: " + cityName);
+        addCityModal.style.display = "none";
+        document.getElementById("cityName").value = "";
+      } else {
+        alert("Please enter a city name.");
+      }
+    }
+
+    // When the user clicks the submit button for deleting city
+    submitDeleteBtn.onclick = function() {
+      var cityNameToDelete = document.getElementById("cityNameToDelete").value;
+      if (cityNameToDelete) {
+        alert("City deleted: " + cityNameToDelete);
+        deleteCityModal.style.display = "none";
+        document.getElementById("cityNameToDelete").value = "";
+      } else {
+        alert("Please enter a city name to delete.");
+      }
+    }
+
+    // When the user clicks the submit button for editing city
+    submitEditBtn.onclick = function() {
+      var cityNameToEdit = document.getElementById("cityNameToEdit").value;
+      if (cityNameToEdit) {
+        alert("City info updated to: " + cityNameToEdit);
+        editInfoModal.style.display = "none";
+        document.getElementById("cityNameToEdit").value = "";
+      } else {
+        alert("Please enter a new city name.");
+      }
+    }
+  </script>
+</body>
+</html>
