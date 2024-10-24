@@ -1,11 +1,11 @@
 /* Importing Google Fonts - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family:"Bebas Neue", sans-serif;
 }
 
 body {
@@ -14,25 +14,29 @@ body {
   justify-content: center;
   height: 100vh;
   padding: 15px;
-  background: #1abc9c;
+  background: #ffffff; /* White background */
+  background-image: url(bg3.jpg); /* Add your background image */
+  background-size: cover; /* Ensure the image covers the entire body */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   overflow: hidden;
 }
 
 .wrapper {
   max-width: 500px;
   width: 100%;
-  background: #fff;
+  background: #fff; /* White background for wrapper */
   border-radius: 5px;
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .wrapper .title {
   height: 120px;
-  background: #16a085;
+  background: #000000; /* Black background for title */
   border-radius: 5px 5px 0 0;
-  color: #fff;
-  font-size: 60px;
-  font-weight: 600;
+  color: #ffffff; /* White text */
+  font-size: 20px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,27 +58,27 @@ body {
   outline: none;
   padding-left: 70px;
   border-radius: 5px;
-  border: 1px solid lightgrey;
+  border: 1px solid #ccc; /* Light gray border */
   font-size: 18px;
   transition: all 0.3s ease;
 }
 
 form .row input:focus {
-  border-color: #16a085;
+  border-color: #000000; /* Black border on focus */
 }
 
 form .row input::placeholder {
-  color: #999;
+  color: #999; /* Gray placeholder text */
 }
 
 .wrapper form .row i {
   position: absolute;
   width: 55px;
   height: 100%;
-  color: #fff;
+  color: #ffffff; /* White icon color */
   font-size: 22px;
-  background: #16a085;
-  border: 1px solid #16a085;
+  background: #000000; /* Black background for icon */
+  border: 1px solid #000000; /* Black border */
   border-radius: 5px 0 0 5px;
   display: flex;
   align-items: center;
@@ -86,28 +90,28 @@ form .row input::placeholder {
 }
 
 .wrapper form .pass a {
-  color: #16a085;
+  color: #000000; /* Black text */
   font-size: 17px;
   text-decoration: none;
 }
 
 .wrapper form .pass a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }
 
 .wrapper form .button input {
   margin-top: 20px;
-  color: #fff;
+  color: #ffffff; /* White text */
   font-size: 20px;
   font-weight: 500;
   padding-left: 0px;
-  background: #16a085;
-  border: 1px solid #16a085;
+  background: #000000; /* Black button background */
+  border: 1px solid #000000; /* Black border */
   cursor: pointer;
 }
 
 form .button input:hover {
-  background: #12876f;
+  background: #555555; /* Dark gray on hover */
 }
 
 .wrapper form .signup-link {
@@ -117,10 +121,10 @@ form .button input:hover {
 }
 
 .wrapper form .signup-link a {
-  color: #16a085;
+  color: #000000; /* Black link */
   text-decoration: none;
 }
 
 form .signup-link a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }

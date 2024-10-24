@@ -5,8 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smart City</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <img src="bg.jpg.jpg" alt="">
   <style>
+    body {
+      font-family:  "Bebas Neue" sans-serif;
+      background-color: #ffffff; /* White background */
+      color: #bbb lue;; /* Black text */
+      background-image: url(bg3.jpg); /* Add your background image */
+      background-size: cover; /* Ensure the image covers the entire body */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      margin: 0; 
+      padding: 0; 
+    }
+
+    .wrapper {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white; /* White background for the wrapper */
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #000000; /* Black text */
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .row i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #000000; /* Black icon color */
+    }
+
+    input[type="text"], input[type="password"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc; /* Light gray border */
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .button {
+      background-color: #000000; /* Black button */
+      color: white; /* White text */
+      padding: 10px 20px; /* Button padding */
+      border: none; /* No border */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; 
+      font-size: 16px; /* Font size for button text */
+      width: 100%; /* Full width */
+      transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .signup-link {
+      margin-top: 20px;
+      color: #000000; /* Black text */
+    }
+
+    .signup-link a {
+      color: #000000; /* Black link */
+      text-decoration: none;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+
     /* Additional styles for modal */
     .modal {
       display: none; /* Hidden by default */
@@ -22,7 +99,7 @@
     }
 
     .modal-content {
-      background-color: #fefefe;
+      background-color: #ffffff; /* White background for modal */
       margin: 15% auto; /* 15% from the top and centered */
       padding: 20px;
       border: 1px solid #888;
@@ -51,7 +128,7 @@
     <div class="title"><span>Smart City</span></div>
     <form action="#">
       <div class="row button">
-        <input type="button" value="User   Login" onclick="window.location.href='user-login.html'" />
+        <input type="button" value="User  Login" onclick="window.location.href='user-login.html'" />
       </div>
       <div class="row button">
         <input type="button" value="Admin Login" onclick="window.location.href='admin-login.html'" />
@@ -65,7 +142,7 @@
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
       <div class="title"><span>Signup</span></div>
-      <form action="user-dashboard.html" method="POST">
+      <form action="user-login.html" method="POST">
         <div class="row">
           <input type="text" placeholder="First Name" required />
         </div>

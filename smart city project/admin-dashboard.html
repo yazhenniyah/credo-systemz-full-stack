@@ -5,82 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smart City</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: "Poppins", sans-serif; 
-      background-color: #f0f0f0; 
-      margin: 0; 
-      padding: 0; 
-    }
+body {
+    font-family:  "Bebas Neue", sans-serif; 
+    background-color: #ffffff; /* White background */
+    background-image: url(bg3.jpg); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0; 
+    padding: 0; 
+}
 
-    .wrapper {
-      max-width: 600px; 
-      margin: 50px auto; 
-      padding: 20px; 
-      background: white; 
-      border-radius: 10px; 
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-      text-align: center; 
-    }
+.wrapper {
+    max-width: 600px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background: white; /* White background for wrapper */
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
 
-    .button {
-      margin: 10px 0; 
-    }
+.button {
+    margin: 10px 0; 
+}
 
-    .action-button {
-      font-size: 20px; 
-      padding: 10px 20px; 
-      background: #f9f9f9; 
-      border: none; 
-      border-radius: 5px; 
-      cursor: pointer; 
-      transition: background 0.3s; 
-      width: 100%; 
-    }
+.action-button {
+    font-size: 20px; 
+    padding: 10px 20px; 
+    background: #000000; /* Black background */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background 0.3s; 
+    width: 100%; 
+    color: #ffffff; /* White text color */
+}
 
-    .action-button:hover {
-      background: #e0e0e0; 
-    }
+.action-button:hover {
+    background: #555555; /* Dark gray on hover */
+}
 
-    /* Modal Styles */
-    .modal {
-      display: none; 
-      position: fixed; 
-      z-index: 1; 
-      left: 0;
-      top: 0;
-      width: 100%; 
-      height: 100%; 
-      overflow: auto; 
-      background-color: rgb(0,0,0); 
-      background-color: rgba(0,0,0,0.4); 
-      padding-top: 60px; 
-    }
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px; 
+}
 
-    .modal-content {
-      background-color: #fefefe;
-      margin: 5% auto; 
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%; 
-      max-width: 400px; 
-      border-radius: 10px; 
-    }
+.modal-content {
+    background-color: #ffffff; /* White background for modal content */
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 400px; 
+    border-radius: 10px; 
+}
 
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
+.close {
+    color: #aaa; /* Light gray for close button */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
+.close:hover,
+.close:focus {
+    color: black; /* Black on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
   </style>
 </head>
 <body>
