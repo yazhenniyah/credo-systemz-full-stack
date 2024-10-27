@@ -94,15 +94,17 @@
 </head>
 <body>
   <div class="wrapper">
+    <div class = container>
+      <form action="/post" method="POST">
     <div class="title"><span>User Login</span></div>
     <form onsubmit="return validateLogin(event)">
       <div class="row">
         <i class="fas fa-user"></i>
-        <input type="text" placeholder="Email or Phone" required />
+        <input type="text" name="Username" placeholder="Enter Username" required>
       </div>
       <div class="row">
         <i class="fas fa-lock"></i>
-        <input type="password" id="password" placeholder="Password" required />
+        <input type="password" name="password" placeholder="Enter Password" required>
       </div>
       <div class="pass"><a href="#" style="color: #000000;">Forgot password?</a></div>
       <div class="row">
@@ -110,7 +112,9 @@
       </div>
       <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
     </form>
+  </form>
   </div>
+</div>
 
   <script>
     function validateLogin(event) {
